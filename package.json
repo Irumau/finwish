@@ -1,0 +1,28 @@
+{
+  "name": "finwish-ecosystem",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Ecosistema de Gestión de Gastos + Wishlist Inteligente",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:expenses": "turbo run dev --filter=@finwish/expenses-web",
+    "dev:wishlist": "turbo run dev --filter=@finwish/wishlist-web",
+    "dev:api": "turbo run dev --filter=@finwish/api",
+    "dev:worker": "turbo run dev --filter=@finwish/worker",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "db:generate": "pnpm --filter @finwish/database db:generate",
+    "db:migrate": "pnpm --filter @finwish/database db:migrate",
+    "db:seed": "pnpm --filter @finwish/database db:seed",
+    "docker:up": "docker compose -f docker/docker-compose.yml up -d",
+    "docker:down": "docker compose -f docker/docker-compose.yml down"
+  },
+  "devDependencies": {
+    "turbo": "latest",
+    "typescript": "^5.6.0"
+  },
+  "packageManager": "pnpm@12.15.0"
+}

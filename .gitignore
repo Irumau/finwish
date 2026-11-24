@@ -1,0 +1,63 @@
+# --- Dependencias y almacenes de paquetes ---
+node_modules/
+.pnpm-store/
+
+# --- Salidas de compilación y caché ---
+dist/
+build/
+out/
+.turbo/
+.vite/
+*.tsbuildinfo
+.eslintcache
+coverage/
+
+# --- Pruebas (Playwright / Vitest) ---
+playwright-report/
+test-results/
+blob-report/
+
+# --- Secretos y credenciales (el .env.example SÍ se sube) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+credentials*.json
+service-account*.json
+
+# --- Bases de datos locales y volcados ---
+*.sqlite
+*.sqlite3
+*.db
+*.sql.gz
+*.dump
+*.bak
+
+# --- Logs ---
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# --- Editores y herramientas locales ---
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.claude/settings.local.json
+
+# --- Archivos temporales y pesados habituales ---
+tmp/
+temp/
+*.zip
+*.tar.gz
+*.7z
+*.mp4
+*.mov

@@ -1,0 +1,77 @@
+/*
+ * Variables de tema – propuesta D "Pop Noche".
+ * Claro por defecto. Oscuro de forma automática según el sistema operativo,
+ * y se puede forzar con data-theme="light" | "dark" en <html>
+ * (botón manual o cambio por horario).
+ */
+:root {
+  --color-bg: #fff8fc;
+  --color-surface: #ffffff;
+  --color-track: #efe7ff;
+  --color-ink: #1b1033;
+  --color-muted: #4a3f66;
+  --color-outline: #1b1033;
+  --color-shadow: #1b1033;
+  --color-pink: #ff6fb5;
+  --color-purple: #5b2bd1;
+  --color-link: #5b2bd1;
+  --color-navbg: #ffffff;
+
+  --color-band: #5b2bd1;
+  --color-band-accent: #7a4bea;
+  --color-band-deep: #4a20b0;
+  --color-band-text: #e4d8ff;
+  --color-on-pink: #1b1033;
+  --color-ring-spent: #ffffff;
+  --color-ring-saved: #ff8fcb;
+
+  --color-semaphore-green: #7ee0a4;
+  --color-semaphore-yellow: #ffe08a;
+  --color-semaphore-red: #ff9aa2;
+
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  --radius-chip: 10px;
+  --radius-button: 18px;
+  --radius-card: 22px;
+  --radius-band: 36px;
+  --border-width: 2px;
+  --shadow-offset: 4px 4px 0;
+}
+
+:root[data-theme='dark'] {
+  --color-bg: #150e26;
+  --color-surface: #211638;
+  --color-track: #3a2a63;
+  --color-ink: #f6f2ff;
+  --color-muted: #b8aad6;
+  --color-outline: #a78bfa;
+  --color-shadow: #5b2bd1;
+  --color-pink: #ff7ac0;
+  --color-purple: #a78bfa;
+  --color-link: #d3c4ff;
+  --color-navbg: #1a1030;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color-bg: #150e26;
+    --color-surface: #211638;
+    --color-track: #3a2a63;
+    --color-ink: #f6f2ff;
+    --color-muted: #b8aad6;
+    --color-outline: #a78bfa;
+    --color-shadow: #5b2bd1;
+    --color-pink: #ff7ac0;
+    --color-purple: #a78bfa;
+    --color-link: #d3c4ff;
+    --color-navbg: #1a1030;
+  }
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
