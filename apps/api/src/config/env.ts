@@ -20,6 +20,10 @@ const schema = z.object({
   API_PORT: z.coerce.number().int().positive().default(3000), // coerce: "3000" (texto) -> 3000
   DATABASE_URL: z.string().min(1, 'DATABASE_URL es obligatoria'),
   REDIS_URL: z.string().default('redis://localhost:6379'),
+  // Secreto con el que se firman los access tokens (JWT). Debe ser largo y aleatorio.
+  JWT_ACCESS_SECRET: z.string().min(32, 'JWT_ACCESS_SECRET debe tener al menos 32 caracteres'),
+  ACCESS_TOKEN_TTL: z.string().default('15m'), // vida corta: si se filtra, caduca pronto
+  REFRESH_TOKEN_TTL_DAYS: z.coerce.number().int().positive().default(7),
   // "http://a,http://b" -> ['http://a', 'http://b']
   WEB_ORIGINS: z
     .string()
